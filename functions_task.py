@@ -29,13 +29,13 @@ def calculate_age(entered_year,entered_month,entered_day):
 	elif now.month == "2" and year_type == "normal year":
 		current_month_days = 28
 
-	if now.day > entered_day: 
+	if now.day >= entered_day: 
 		no_of_days = now.day - entered_day
 	else:
 		month_temporary -= 1
 		no_of_days =  (now.day + current_month_days) - entered_day
 
-	if month_temporary > entered_month:
+	if month_temporary >= entered_month:
 		no_of_months = month_temporary - entered_month
 	else:
 		year_temporary -= 1
